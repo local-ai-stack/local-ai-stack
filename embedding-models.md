@@ -2,10 +2,15 @@ Embedding Models for the Local AI Stack
 =======================================
 Typically, you want a specialized embedding model to create the vector embeddings for documents.
 
-Huggingface MTEB leaderboard
-----------------------------
-The [MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard) gives a good first impression of available embedding models.
-It comes with quality scores, model sizes, memory requirements and vector dimensions. 
+How to run an embedding model
+-----------------------------
+Some options:
+
+* Ollama: Ollama can also run embedding models (not "just" LLMs) 
+* https://github.com/huggingface/text-embeddings-inference
+* [SentenceTransformers](https://www.sbert.net/index.html): Sentence Embeddings using Siamese BERT-Networks
+* [FastEmbedd](https://github.com/qdrant/fastembed): Python lib running the ONNX Runtime;
+  claims to be fast and lightweight. CPU and GPU editions.
 
 Embedding models well suited for local AI
 -----------------------------------------
@@ -33,3 +38,11 @@ Uses only 384 dimensions, which has advantages:
 * Time to embedd 12 docs (CPU only, AMD Ryzen 9 5950X): 1.1s
 * `ollama pull znbang/bge:small-en-v1.5-f32`
 * LangChain: `embeddings = OllamaEmbeddings(model="znbang/bge:small-en-v1.5-f32")`
+
+Embedding model comparisons
+---------------------------
+
+### Huggingface MTEB leaderboard
+
+The [MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard) gives a good first impression of available embedding models.
+It comes with quality scores, model sizes, memory requirements and vector dimensions.
