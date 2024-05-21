@@ -12,6 +12,11 @@ Some options:
 * [FastEmbedd](https://github.com/qdrant/fastembed): Python lib running the ONNX Runtime;
   claims to be fast and lightweight. CPU and GPU editions.
 
+Options for resource-constrained devices:
+
+* TensorFlow Lite offers [text embedders](https://www.tensorflow.org/lite/inference_with_metadata/task_library/text_embedder),
+  e.g. universal-sentence-encoder-qa-ondevice
+
 Dimensionality
 --------------
 Embedding models produce vectors of a specific dimensionality.
